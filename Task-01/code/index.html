@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <nav class="Navbar">
+    <nav class="navbar">
         <div class="logo">My Brand</div>
 
         <ul class="nav-links">
@@ -20,5 +22,12 @@
             <div class="menu-toggle">☰</div>
 
     </nav>
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
 </body>
