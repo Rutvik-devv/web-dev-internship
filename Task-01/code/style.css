@@ -25,8 +25,26 @@ body {
 .nav-links a {
   text-decoration: none;
   color: white;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #00bcd4;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #00bcd4;
+  transition: width 0.3s ease;
 }
 
+.nav-links a:hover::after {
+  width: 100%;
+}
 
 .logo{
   text-decoration: none;
@@ -39,4 +57,3 @@ body {
   font-size: 26px;
   cursor: pointer;
 }
-
